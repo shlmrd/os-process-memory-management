@@ -1,0 +1,35 @@
+The assignments illustrate and explore all areas of modern operating
+systems, including threads and concurrency, multiprogramming,
+system calls, virtual memory, software-loaded TLB's, file systems,
+network protocols, remote procedure call, and distributed systems.
+
+Highlights :
+- Threading and synchronization primitives
+- User program support and exception handling
+- MIPS-like machine simulator
+
+Build :
+Requirements: GNU make, g++, and a POSIX shell (Linux, macOS, or WSL).
+
+From the repo root:
+  cd code
+  make
+
+If you are on a new platform, adjust `code/Makefile.dep` so the host
+detection matches your system. The helper scripts in `bin/` are used
+during the build and should remain executable.
+
+Run :
+Threads:
+  cd code/threads
+  ./nachos
+
+User programs:
+  cd code/userprog
+  ./nachos -x ../test/test_file
+
+Repository layout :
+- code/threads: kernel threads and synchronization
+- code/userprog: user program support
+- code/test: sample user programs
+- code/bin: build tools for Nachos utilities
